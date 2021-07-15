@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台管理-登录</title>
+		<style>
+			body{
+				background-color:#1E9FFF;
+			}
+			#picture{
+				width:400px;
+				height:100px;
+			}
+			#sign{
+				color:black;
+				font-family: "微软雅黑";
+				margin-top:20px;
+			}
+			#logindiv{
+				background-color:white;
+				width:550px;
+				height:530px;
+				margin:0 auto;
+				color:#1E9FFF;
+				margin-top:100px;
+				padding-top:20px;
+				text-align: center;
+			}
+			#uname{
+				width:426px;
+				height:55px;
+				border-radius: 5px;
+				border:1px solid lightgrey;
+				margin-left:-30px;
+				background-color:transparent;
+				padding-left:30px;
+			}
+			#upsw{
+				width:426px;
+				height:55px;
+				border-radius: 5px;
+				border:1px solid lightgrey;
+				margin-left:-30px;
+				background-color:transparent;
+				padding-left:30px;
+				margin-top:5px;
+			}
+			.picturesign{
+				margin-top:5px;
+			}
+			#border{
+				color:black;
+				margin-top:10px;
+			}
+			#bottomDIV{
+				color:black;
+				font-family:"宋体";
+				margin-top:5px;
+			}
+			#loginBtn{
+				width:456px;
+				height:55px;
+				margin-top:5px;
+				background-color: orangered;
+				color:white;
+				border-radius: 5px;
+				margin-left:-5px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="receive.html" method="post">
+		<div id="logindiv">
+			<h1 id="sign">管理系统</h1>
+			<img src="user.png">
+			<input type="text" id="uname" name="username" placeholder="请输入用户名">
+			<br>
+			<img src="password.png">
+			<input type="text" id="upsw" name="userpassword" placeholder="请输入密码">
+			<br>
+			<button id="loginBtn">登&nbsp;&nbsp;录</button>
+			<br>
+			<hr>
+			<div id="border">第三方登录</div>
+			<br>
+			<a href="http://wx.qq.com"><img class="picturesign" src="weixin.png"></a>
+			<a href="https://login.sina.com.cn/signup/signin.php"><img class="picturesign" src="weibo.png"></a>
+			<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&redirect_uri=http%3A%2F%2Fspcdp.cdposs.qq.com%2Fauth%2Fcallback&client_id=101477813&state=http%3A%2F%2Fspcdp.cdposs.qq.com%2F"><img class="picturesign" src="qq.png"></a>
+			<div id="bottomDIV">开发者：responsibility</div>
+		</div>
+		</form>
+	</body>
+</html>
