@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人社保计算器</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			function calc(){
+				//1.获得工资，判断输入是否合法(表单验证)
+				//取得文本框里输入的工资
+				var sal=document.getElementById("salary").value;
+				var regExp=/^[0-9]{4,5}$/;
+				if(!regExp.test(sal)){
+					document.getElementById("salary").value="输入不合法！必须输入4~5位数字";
+					document.getElementById("salary").style="color:red";
+					return;
+				}
+				//2.如果输入合法，开始计算
+				var salnum = parseInt(sal);
+				var personnalnursing = salnum * 0.08;
+				var companynursing = salnum * 0.2;
+				var personnalmedicine=salnum * 0.02;
+				var companymedicine=salnum * 0.06;
+				var personnallose=salnum * 0.005;
+				var companylose=salnum * 0.015;
+				var companyhurt=salnum * 0.005;
+				var companyborn=salnum * 0.008;
+				var personnalfund=salnum * 0.12;
+				var companyfund=salnum * 0.12;
+				var personnaltotal=personnalnursing+personnalmedicine+personnallose+personnalfund;
+				var companytotal=companynursing+companymedicine+companylose+companyhurt+companyborn+companyfund;
+				var total=salnum+personnaltotal+companytotal;
+				//3.把计算结果放入文本框
+				document.getElementById("personnalnursing").innerHTML=personnalnursing;
+				document.getElementById("companynursing").innerText=companynursing;
+				document.getElementById("personnalmedicine").innerHTML=personnalmedicine;
+				document.getElementById("companymedicine").innerText=companymedicine;
+				document.getElementById("personnallose").innerText=personnallose;
+				document.getElementById("companylose").innerText=companylose;
+				document.getElementById("companyhurt").innerText=companyhurt;
+				document.getElementById("companyborn").innerText=companyborn;
+				document.getElementById("personnalfund").innerText=personnalfund;
+				document.getElementById("companyfund").innerText=companyfund;
+				document.getElementById("personnaltotal").innerText=personnaltotal;
+				document.getElementById("companytotal").innerText=companytotal;
+				document.getElementById("total").innerText=total;
+			}
+			function clearContent(){
+				document.getElementById("salary").value='';
+				document.getElementById("salary").style="color:black";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container text-center">
+			<h2>个人工资-个人社保计算器</h2>
+			<img src="猛禽.jpg" class="img-circle" width="100px" height="100px">
+			<table class="table table-bordered text-center">
+				<tr>
+					<td>工资</td>
+					<td colspan="3"><input onfocus="clearContent()" type="text" id="salary" class="form-control" placeholder="请输入工资"></td>
+					<td><button onclick="calc()" class="btn btn-danger btn-block">计算</button></td>
+				</tr>
+				<tr class="bg-primary">
+					<td>险种</td>
+					<td>个人%</td>
+					<td>个人</td>
+					<td>公司%</td>
+					<td>公司</td>
+				</tr>
+				<tr>
+					<td>养老</td>
+					<td>8%</td>
+					<td id="personnalnursing"></td>
+					<td>20%</td>
+					<td id="companynursing"></td>
+				</tr>
+				<tr>
+					<td>医疗</td>
+					<td>2%</td>
+					<td id="personnalmedicine"></td>
+					<td>6%</td>
+					<td id="companymedicine"></td>
+				</tr>
+				<tr>
+					<td>失业</td>
+					<td>0.5%</td>
+					<td id="personnallose"></td>
+					<td>1.5%</td>
+					<td id="companylose"></td>
+				</tr>
+				<tr>
+					<td>工伤</td>
+					<td></td>
+					<td></td>
+					<td>0.5%</td>
+					<td id="companyhurt"></td>
+				</tr>
+				<tr>
+					<td>生育</td>
+					<td></td>
+					<td></td>
+					<td>0.8%</td>
+					<td id="companyborn"></td>
+				</tr>
+				<tr>
+					<td>公积金</td>
+					<td>12%</td>
+					<td id="personnalfund"></td>
+					<td>12%</td>
+					<td id="companyfund"></td>
+				</tr>
+				<tr>
+					<td>合计</td>
+					<td>个人合计</td>
+					<td id="personnaltotal"></td>
+					<td>公司合计</td>
+					<td id="companytotal"></td>
+				</tr>
+				<tr>
+					<td>总额</td>
+					<td id="total" colspan="4"></td>
+				</tr>
+			</table>
+			开发者：responsbility
+		</div>
+	</body>
+</html>
+
