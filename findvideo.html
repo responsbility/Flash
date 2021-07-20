@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+ </script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+</head>
+<body>
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">公开课查询</a></li>
+    </ul>
+   </div>   
+    <div class="formbody">
+    <div id="tab2" class="tabson">       
+    <ul class="seachform">    
+    <li><label>日期</label><input name="classid" type="text" class="dfinput" style="width:100px;"/>年 <input name="classid" type="text" class="dfinput" style="width:100px;"/>月 <input name="classid" type="text" class="dfinput" style="width:100px;"/>日</li>
+    <li><label>院系</label>  
+    <div class="vocation">
+    <select class="select3">
+    <option>软件学院</option>
+    <option>大数据学院</option>
+    <option>理学院</option>
+    </select>
+    </div>
+    </li>
+    <li><label>年级</label><input name="" type="text" class="scinput" style="width:80px" /></li>
+    <li><label>专业</label>  
+    <div class="vocation">
+    <select class="select3">
+    <option>软件工程</option>
+    <option>应用数学</option>
+    <option>物联网工程</option>
+    </select>
+    </div>
+    </li>   
+   	<li><label>状态</label>  
+    <div class="vocation">
+    <select class="select3">
+    <option>正常</option>
+    <option>退出</option>
+    <option>毕业</option>
+    </select>
+    </div>
+    </li>  
+    <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询"/></li>    
+    </ul>        
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>姓名<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>学号</th>
+        <th>年级</th>
+        <th>专业</th>
+        <th>日期</th>
+        <th>技术专题</th>
+        <th>主讲人</th>
+        <th>组织人</th>
+        <th>地点</th>
+        <th>群体说明</th>
+        <th>方式</th>
+        <th>创新学分值</th>
+        <th>参加人数</th>
+       	<th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>张三</td>
+        <td>2013041809</td>
+        <td>2020级</td>
+        <td>软件工程</td>
+        <td>2020年7月1日</td>
+        <td>C语言</td>
+        <td>张三</td>
+        <td>软件学院2020级教师</td>
+        <td>11108H</td>
+        <td>软件学院2020级1-5班全体同学</td>
+        <td>线下</td>
+        <td>4.0</td>
+        <td>250</td>
+        <td>无</td>
+        </tr> 
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>李四</td>
+        <td>2013042009</td>
+        <td>2020级</td>
+        <td>软件工程</td>
+        <td>2021年7月1日</td>
+        <td>Java</td>
+        <td>李四</td>
+        <td>软件学院2020级教师</td>
+        <td>11208H</td>
+        <td>软件学院2020级全体同学</td>
+        <td>直播</td>
+        <td>4.0</td>
+        <td>790</td>
+        <td>无</td>
+       </tr>
+       <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>王五</td>
+        <td>1907030809</td>
+        <td>2019级</td>
+        <td>物联网工程</td>
+        <td>2019年7月1日</td>
+        <td>Javascript</td>
+        <td>王五</td>
+        <td>大数据学院2019级教师</td>
+        <td>11308H</td>
+        <td>大数据学院全体同学</td>
+        <td>录播</td>
+        <td>4.0</td>
+        <td>250</td>
+        <td>无</td>              
+        </tbody>
+    </table>
+    </div>  
+	</div>
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+   </script>
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>                
+   </div>
+</body>
+</html>
