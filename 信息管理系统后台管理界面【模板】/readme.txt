@@ -1,9 +1,9 @@
-Ö÷¿ò¼ÜÊÇ£ºmain.html
-¶¥²¿£ºtop.html
-×ó²à£ºleft.html
-Ö÷Ìå£ºdefault.html;Ä¬ÈÏÏÔÊ¾µÄÊÇÄÄ¸öÍøÒ³
-µ×²¿£ºfooter.html
+ä¸»æ¡†æ¶æ˜¯ï¼šmain.html
+é¡¶éƒ¨ï¼štop.html
+å·¦ä¾§ï¼šleft.html
+ä¸»ä½“ï¼šdefault.html;é»˜è®¤æ˜¾ç¤ºçš„æ˜¯å“ªä¸ªç½‘é¡µ
+åº•éƒ¨ï¼šfooter.html
 
-Ñ§Ô±¹ÜÀí£º
-Ìí¼ÓÑ§Ô±£ºaddStudent.html
-²éÑ¯Ñ§Ô±£ºfindStudent.html
+å­¦å‘˜ç®¡ç†ï¼š
+æ·»åŠ ç”¨æˆ·ï¼šaddUser.html
+æŸ¥è¯¢ç”¨æˆ·ï¼šfindUser.html
