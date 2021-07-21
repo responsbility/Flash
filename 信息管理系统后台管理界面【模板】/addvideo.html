@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+<script>
+	function checktopic(){
+			var tname = document.getElementById("topicname").value;
+			var tnameTip = document.getElementById("topicnameTip");
+			var reg = /^[0-9]$/;
+			if(reg.test(tname)){
+				tnameTip.innerHTML="用户名不合法!";
+				tnameTip.style="color:red"
+			}else{
+				tnameTip.innerHTML="";
+			}
+		}
+	function checkperson(){
+			var pname = document.getElementById("personname").value;
+			var pnameTip = document.getElementById("personnameTip");
+			var reg = /^[\u4E00-\u9FA5]{2,4}$/;
+			if(!reg.test(pname)){
+				pnameTip.innerHTML="用户名不合法!";
+				pnameTip.style="color:red"
+			}else{
+				pnameTip.innerHTML="";
+			}
+		}
+	function checkgrade(){
+			var gname = document.getElementById("gradename").value;
+			var gnameTip = document.getElementById("gradenameTip");
+			var reg = /^[0-9]{1}[.]{1}[0-9]{1}$/;
+			if(!reg.test(gname)){
+				gnameTip.innerHTML="用户名不合法!";
+				gnameTip.style="color:red"
+			}else{
+				gnameTip.innerHTML="";
+			}
+		}
+	function checknumber(){
+			var nname = document.getElementById("numbername").value;
+			var nnameTip = document.getElementById("numbernameTip");
+			var reg = /^[0-9]{1,10}$/;
+			if(!reg.test(nname)){
+				nnameTip.innerHTML="用户名不合法!";
+				nnameTip.style="color:red"
+			}else{
+				nnameTip.innerHTML="";
+			}
+		}
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">录入公开课</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">         
+  	<div id="tab1" class="tabson">    
+    <ul class="forminfo">
+    <li>
+      <label>日期<b>*</b></label>
+      <input name="classid" type="text" class="dfinput" style="width:100px;"/>年 <input name="classid" type="text" class="dfinput" style="width:100px;"/>月 <input name="classid" type="text" class="dfinput" style="width:100px;"/>日
+    </li>
+	 <li>
+      <label>技术专题<b>*</b></label>
+      <input onblur="checktopic()" id="topicname" name="Input" type="text" class="dfinput"  placeholder="字母和汉字组合，1-50个字符"  style="width:345px;"/>
+	   <i id="topicnameTip"></i>
+	 </li>
+     <li>
+      <label>主讲人<b>*</b></label>
+      <input onblur="checkperson()" id="personname" name="Input" type="text" class="dfinput"  placeholder="2-4个汉字"  style="width:345px;"/>
+  	  <i id="personnameTip"></i>
+    </li>
+    <li>
+      <label>组织人<b>*</b></label>
+      <input name="classid" type="text" class="dfinput" placeholder="字母和汉字组合，不限"   style="width:345px;"/>
+    </li>
+    <li>
+      <label>地点<b>*</b></label>
+      <input name="classid" type="text" class="dfinput" placeholder="请输入地点"   style="width:345px;"/>
+    </li>
+    <li>
+      <label>群体说明<b>*</b></label>
+      <input name="classid" type="text" class="dfinput" style="width:345px;"/>
+    </li>
+    <li>
+      <label>方式<b>*</b></label>
+      <div class="vocation">
+      	<select class="select3">
+      	<option>线下</option>
+      	<option>直播</option>
+      	<option>录播</option>
+     </select>
+    </div>
+    </li>
+    <li>
+      <label>创新学分值<b>*</b></label>
+      <input onblur="checkgrade()" id="gradename" name="classid" type="text" class="dfinput" placeholder="请输入创新学分值(如：4.0)"   style="width:345px;"/>
+      <i id="gradenameTip"></i>
+    </li>
+    <li>
+      <label>参加人数<b>*</b></label>
+      <input onblur="checknumber()" id="numbername" name="classid" type="text" class="dfinput" placeholder="请输入1-10位数字"  style="width:345px;"/>
+      <i id="numbernameTip"></i>
+    </li>      
+    <li><label>备注<b>*</b></label>
+    	<textarea id="content7" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
+    </li>
+    <li><label>&nbsp;</label><input name="" type="button" class="btn" value="录入"/></li>
+    </ul>
+    </div> 
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+    </div>
+
+
+</body>
+
+</html>
