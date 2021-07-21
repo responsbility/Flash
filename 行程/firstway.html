@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+ </script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+</head>
+<body>
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">路线1</a></li>
+    </ul>
+  </div>   
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+       <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>地点<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>交通方式</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点<b>*</b></th>
+        <th>地点<b>*</b></th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>交通方式</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>地点<b>*</b></th>
+        <th>地点<b>*</b></th>
+        <th>操作</th>
+        <th>地点</th>
+        <th>地点</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>太原南站</td>
+        <td>51路</td>
+        <td>学府街站</td>
+        <td>开化寺站</td>
+        <td>柳巷</td>
+        <td>文瀛公园</td>
+        <td>省立第一中学旧址</td>
+        <td>铜锣湾</td>
+        <td>老鼠窟</td>
+        <td>食品街</td>
+        <td>府西街站</td>
+        <td>体育路站</td>
+        <td>865路</td>
+        <td>山西省博物馆</td>
+        <td>山西省地址博物馆</td>
+        <td>太原市图书馆</td>
+        <td>中国煤炭博物馆</td>
+        <td>滨河体育中心</td>
+        <td>汾河公园</td>
+        <td>原路返回</td>
+        <td>印象城</td>
+        <td>无</td>
+        </tr>
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>太原南站</td>
+        <td>51路</td>
+        <td>学府街站</td>
+        <td>开化寺站</td>
+        <td>柳巷</td>
+        <td>文瀛公园</td>
+       	<td>省立第一中学旧址</td>
+        <td>铜锣湾</td>
+        <td>老鼠窟</td>
+        <td>食品街</td>
+        <td>府西街站</td>
+        <td>大南门站</td>
+        <td>65路</td>
+        <td>太原市博物馆</td>
+        <td>山西省大剧院</td>
+        <td>太原市科技馆</td>
+        <td>山西省图书馆</td>
+        <td>太原市美术馆</td>
+        <td>万象城</td>
+        <td>汾河公园</td>
+        <td>原路返回</td>
+        <td>印象城</td>
+        </tr> 
+        </tbody>
+    </table>
+    </div>  
+	</div>
+	<span style="font-size:20px">注：带*的地点是可能去的地方，到时候看情况</span>
+	<span style="font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;动车：平遥古城-太原南(8:12-9:00)&nbsp;&nbsp;&nbsp;&nbsp;太原南-平遥古城(19:13-19:52)</span>
+	<span style="font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公交：51路、865路</span>
+	<span style="font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大部分景点免费，不需要花钱,但需要预约</span>
+	<span style="font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;路线1优先选择</span>
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+   </script>
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>                
+   </div>
+</body>
+</html>
