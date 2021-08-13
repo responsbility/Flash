@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>顶部导航</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){	
+	//顶部导航切换
+	$(".nav li a").click(function(){
+		$(".nav li a.selected").removeClass("selected")
+		$(this).addClass("selected");
+	})	
+})	
+</script>
+
+</script>
+
+<script>
+function exit(){
+	var x=confirm("确定退出登录？")
+	if(x==true){
+		alert("成功退出登录");
+		window.top.location="login.html";
+	}
+	else{
+		return;
+	}
+}
+</script>	
+</head>
+
+<body style="background:url('images/taiyuan.jpeg') repeat-x;" >
+    
+    <div class="topright">    
+    <ul>
+    <li>
+    	<script type="text/javascript">
+    	var d = new Date();
+    	document.write(d.getFullYear()+"年");
+    	
+    	var d = new Date();
+    	document.write(d.getMonth()+1+"月");
+    	
+    	var d = new Date();
+    	document.write(d.getDate()+"日");
+    	</script>
+    </li>
+    <li id="week"></li>
+    <script>
+		var d = new Date();
+		var day= new Array(7);
+		day[0]="星期日";
+		day[1]="星期一";
+		day[2]="星期二";
+		day[3]="星期三";
+		day[4]="星期四";
+		day[5]="星期五";
+		day[6]="星期六";
+		document.getElementById("week").innerHTML=day[d.getDay()];
+	</script>
+    </ul>
+     
+    <div class="user">
+    <span>admin</span>
+    <i><a href="#" style="color:white" onclick="exit()">退出</a></i>
+    </div>    
+    
+    </div>
+
+</body>
+</html>

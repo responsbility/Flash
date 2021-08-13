@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>路线4</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+ </script>
+ <script>
+ function Forward(){
+	window.history.forward();
+}
+function Back(){
+    window.history.back();
+}
+function Print(){
+    window.print();
+}
+function change(){
+	if (window.top!=window.self) {
+		window.top.location="main.html";
+	}
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+<script>
+function startTime(){
+	var today=new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();// 在小于10的数字前加一个‘0’
+	m=checkTime(m);
+	s=checkTime(s);
+	document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+	t=setTimeout(function(){startTime()},500);
+}
+function checkTime(i){
+	if (i<10){
+		i="0" + i;
+	}
+	return i;
+}
+</script>
+</head>
+<body onload="startTime()">
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#" onclick="change()">首页</a></li>
+    <li><a href="#">路线4</a></li>
+    </ul>
+     <span>
+    	<script type="text/javascript">
+    	var d = new Date();
+    	document.write(d.getFullYear()+"年");
+    	
+    	var d = new Date();
+    	document.write(d.getMonth()+1+"月");
+    	
+    	var d = new Date();
+    	document.write(d.getDate()+"日");
+    	</script>
+    </span>
+     <span id="week"></span>
+    <script>
+		var d = new Date();
+		var day= new Array(7);
+		day[0]="星期日";
+		day[1]="星期一";
+		day[2]="星期二";
+		day[3]="星期三";
+		day[4]="星期四";
+		day[5]="星期五";
+		day[6]="星期六";
+		document.getElementById("week").innerHTML=day[d.getDay()];
+	</script>
+    <span id="txt"></span>
+    <span><a href="#" onclick="Forward()">前进</a></span>
+    <span><a href="#" onclick="Back()">后退</a></span>
+    <span><a href="#" onclick="Print()">打印此页</a></span>
+  </div>   
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+       <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>地点<i class="sort"><img src="images/px.gif" /></i></th>
+        <th>交通方式</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>交通方式</th>
+        <th>地点</th>
+        <th>交通方式</th>
+        <th>地点</th>
+        <th>地点</th>
+        <th>交通方式</th>
+        <th>地点</th>
+        <th>地点<b>*</b></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>太原南站</td>
+        <td>502路</td>
+        <td>胜利桥东</td>
+        <td></td>
+        <td>Y6路</td>
+        <td>方特东方神话</td>
+        <td>Y6路</td>
+        <td>胜利桥东</td>
+        <td></td>
+        <td>502路</td>
+        <td>太原南站</td>
+        <td>印象城<b>*</b></td>
+        </tr>
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>太原南站</td>
+        <td>51路</td>
+        <td>学府街站</td>
+        <td>大北门站</td>
+        <td>Y6路</td>
+        <td>方特东方神话</td>
+        <td>Y6路</td>
+        <td>大北门站</td>
+        <td>学府街站</td>
+        <td>51路</td>
+        <td>太原南站</td>
+        <td>印象城<b>*</b></td>
+        </tr> 
+        <tr>
+        <td><input name="" type="checkbox" value="" /></td>
+        <td>太原南站</td>
+        <td>出租车</td>
+        <td>方特东方神话</td>
+        <td></td>
+        <td>出租车</td>
+        <td>太原南站</td>
+        <td></td>
+        <td>印象城<b>*</b></td>
+        </tr> 
+        </tbody>
+    </table>
+    </div>  
+	</div>
+	<span style="font-size:20px">注：带*的地点是可能去的地方，到时候看情况</span>
+	<span style="font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;动车：平遥古城-太原南(8:12-9:00)&nbsp;&nbsp;&nbsp;&nbsp;太原南-平遥古城(19:13-19:52)</span>
+	<span style="font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公交：51路、502路、Y6路</span>
+	<span style="font-size:20px">来回交通工具可公交、地铁、出租车混合</span>
+	<span style="font-size:20px">本路线不推荐，原因见<a href="question.html" style="font-size:20px;color:red">问题</a><a href="explain.html" style="font-size:20px;color:blue">解释</a>，但是也可以考虑，只不过花销太大、时间太长</span>
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+   </script>
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>                
+   </div>
+</body>
+</html>
