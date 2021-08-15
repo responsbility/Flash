@@ -21,7 +21,7 @@ $(function(){
 function exit(){
 	var x=confirm("确定退出登录？")
 	if(x==true){
-		alert("成功退出登录");
+		setTimeout(function(){alert("成功退出登录")}",2000);
 		window.top.location="login.html";
 	}
 	else{
