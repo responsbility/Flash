@@ -100,46 +100,6 @@ function welcomesign(){
     	document.write(d.getDate()+"日");
     	</script>
     </li>
-    <li id="week"></l>
-    	<script>
-		var d = new Date();
-		var day= new Array(7);
-		day[0]="星期日";
-		day[1]="星期一";
-		day[2]="星期二";
-		day[3]="星期三";
-		day[4]="星期四";
-		day[5]="星期五";
-		day[6]="星期六";
-		document.getElementById("week").innerHTML=day[d.getDay()];
-	</script>
-	<li id="txt"></li>
-    <li>
-    	<script type="text/javascript">
-			var d = new Date();
-			var time = d.getHours();
-			if(time>=6&&time<8)
-			{
-				document.write("<b>早上好!</b>")
-			}
-			else if(time>=8&&time<11)
-				{
-					document.write("<b>上午好!</b>")
-				}
-				else if(time>=11&&time<14)
-					{
-						document.write("<b>中午好!</b>")
-					}
-					else if(time>=14&&time<19)
-						{
-							document.write("<b>下午好!</b>")
-						}
-						else
-						{
-							document.write("<b>晚上好!</b>")
-						}
-			</script>	
-    </li>
     <li>
  		<script language=JavaScript>
 		function CalConv()
@@ -272,7 +232,22 @@ function welcomesign(){
 		}
 		</script>
 		<font><script>CalConv();</script></font></a>
-    </li>
+    </li>	    
+    <li id="week"></l>
+    	<script>
+		var d = new Date();
+		var day= new Array(7);
+		day[0]="星期日";
+		day[1]="星期一";
+		day[2]="星期二";
+		day[3]="星期三";
+		day[4]="星期四";
+		day[5]="星期五";
+		day[6]="星期六";
+		document.getElementById("week").innerHTML=day[d.getDay()];
+	</script>
+	<li id="txt"></li>
+    
     <li><a href="help.html">帮助</a></li>
     <li><a href="about.html">关于</a></li>
     <li ><a href="#" style="color:white" onclick="exit()">退出</a></li>
