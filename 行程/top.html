@@ -45,11 +45,6 @@ function exit(){
 		return;
 	}
 }
-function change(){
-	if (window.top!=window.self) {
-		window.top.location="main.html";
-	}
-}
 function changehelp(){
 	if(window.top!=window.self){
 		window.top.location="tophelp.html";
@@ -351,7 +346,7 @@ function changeabout(){
      
     <div class="topright">    
     <ul>
-    <li><a href="#" target="_parent" onclick="change()">首页</a></li>
+    <li><a href="main.html" target="_parent">首页</a></li>
     <li><a href="#" onclick="changehelp()">帮助</a></li>
     <li><a href="#" onclick="changeabout()">关于</a></li>
     </ul>
