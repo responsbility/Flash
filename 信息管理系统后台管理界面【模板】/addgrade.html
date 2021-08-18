@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>录入学分</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+<script>
+	function checkUsername(){
+			var uname = document.getElementById("username").value;
+			var unameTip = document.getElementById("usernameTip");
+			var reg = /^[\u4E00-\u9FA5]{2,5}$/;
+			if(!reg.test(uname)){
+				unameTip.innerHTML="用户名不合法!";
+				unameTip.style="color:red"
+			}else{
+				unameTip.innerHTML="";
+			}
+		}
+	function checknum(){
+			var nname = document.getElementById("numbername").value;
+			var nnameTip = document.getElementById("numbernameTip");
+			var reg =/^[0-9]{10}$/;  
+			if(!reg.test(nname)){
+				nnameTip.innerHTML="用户名不合法!";
+				nnameTip.style="color:red"
+			}else{
+				nnameTip.innerHTML="";
+			}
+		}
+	function checkgrade(){
+			var gname = document.getElementById("gradename").value;
+			var gnameTip = document.getElementById("gradenameTip");
+			var reg =/^[\u4E00-\u9FA5]{2,10}$/;  
+			if(!reg.test(gname)){
+				gnameTip.innerHTML="用户名不合法!";
+				gnameTip.style="color:red"
+			}else{
+				gnameTip.innerHTML="";
+			}
+		}
+	function checkcollege(){
+			var cname = document.getElementById("collegename").value;
+			var cnameTip = document.getElementById("collegenameTip");
+			var reg =/^[0-9]{1}[.]{1}[0-9]{1}$/;  
+			if(!reg.test(cname)){
+				cnameTip.innerHTML="用户名不合法!";
+				cnameTip.style="color:red"
+			}else{
+				cnameTip.innerHTML="";
+			}
+		}
+	function checkscore(){
+			var sname = document.getElementById("scorename").value;
+			var snameTip = document.getElementById("scorenameTip");
+			var reg =/^[0-9]{1}[.]{1}[0-9]{1}$/;  
+			if(!reg.test(sname)){
+				snameTip.innerHTML="用户名不合法!";
+				snameTip.style="color:red"
+			}else{
+				snameTip.innerHTML="";
+			}
+		}
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">录入学分</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">         
+  	<div id="tab1" class="tabson">    
+    <ul class="forminfo">
+    <li>
+      <label>姓名<b>*</b></label>
+      <input onblur="checkname()" id="name" name="classid" type="text" class="dfinput" placeholder="2-5个汉字"   style="width:345px;"/>
+      <i id="nameTip"></i>
+    </li>
+	 <li>
+      <label>学号<b>*</b></label>
+      <input onblur="checknum()" id="numbername" name="Input" type="text" class="dfinput"  placeholder="请输入10位学号"  style="width:345px;"/>
+      <i id="numbernameTip"></i>
+	 </li>
+      <li>
+      <label>年级<b>*</b></label>
+      <input onblur="checkgrade()" id="gradename" name="classid" type="text" class="dfinput" placeholder="请输入年级(如：2020级)"   style="width:345px;"/>
+      <i id="gradenameTip"></i>
+    </li>
+    <li>
+      <label>院系<b>*</b></label>
+      <input onblur="checkcollege()" id="collegename" name="classid" type="text" class="dfinput" placeholder="2-10个汉字" style="width:345px;"/>
+      <i id="collegenameTip"></i>
+    </li>
+    <li>
+      <label>分值<b>*</b></label>
+      <input onblur="checkscore()" id="scorename" name="classid" type="text" class="dfinput" placeholder="请输入分值(如：4.0)"  style="width:345px;"/>
+      <i id="scorenameTip"></i>
+    </li>
+    <li>
+      <label>事由<b>*</b></label>
+      <div class="vocation">
+      	<select class="select3">
+      	<option>2019公开课</option>
+      	<option>2020公开课</option>
+      	<option>2021公开课</option>
+     </select>
+    </div>
+    </li>
+    <li>
+      <label>取得时间<b>*</b></label>
+      <input name="classid" type="text" class="dfinput" style="width:100px">年 <input name="classid" type="text" class="dfinput" style="width:100px">月
+    </li>
+    <li>
+      <label>录入时间<b>*</b></label>
+     <label>2021年9月1日</label>
+    </li>
+    <li>
+      <label>录入人<b>*</b></label>
+      <label>王睿卿</label>
+    </li> 
+    <li><label>备注<b>*</b></label>
+    	<textarea id="content7" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
+    </li>
+    <li><label>&nbsp;</label><input name="" type="button" class="btn" value="录入"/></li>
+    </ul>
+    </div> 
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+    </div>
+
+
+</body>
+
+</html>
