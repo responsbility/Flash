@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中国铁路12306</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+		$(function () { 
+			$("[data-toggle='popover']").popover();
+		});
+</script>
+	</head>
+	<body>
+		<form action="receive.html" method="post">
+			<table align="center">
+				<tr>
+					<td>*用户名：</td>
+					<td><input type="text" placeholder="用户名设置成功后不可修改"></td>
+					<td>6-30位字母、数字或“_”,字母开头</td>
+				</tr>
+				<tr>
+					<td>*密码：</td>
+					<td><input type="password" placeholder="6-20位字母、数字或符号"></td>
+				</tr>
+				<tr>
+					<td>*确认密码：</td>
+					<td><input type="password" placeholder="再次输入您的登陆密码"></td>
+				</tr>
+				<tr>
+					<td>*证件类型：</td>
+					<td><select>
+						<option selected>中国居民身份证</option>	
+						<option>港澳居民来往内地通行证</option>
+						<option>台湾居民来往大陆通行证</option>
+						<option>护照</option>
+						</select>
+					</td>
+				<tr>
+					<td  colspan="2" align="center">
+						<input type="radio" name="ID type">中国居民身份证
+					</td>
+				</tr>
+				<tr>
+					<td  colspan="2" align="center">
+						<input type="radio" name="ID type">外国人永久居留身份证
+					</td>
+				</tr>
+				<tr>
+					<td  colspan="2" align="center">
+						<input type="radio" name="ID type">港澳台居民居住证
+					</td>
+				</tr>	
+					<td>*姓名：</td>
+					<td><input type="text" placeholder="请输入姓名"></td>
+					<td>
+						<button type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="1.确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。2.输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉字的拼音或同音字重新修改后保存。3.姓名中有繁体字无法输入时，可用简体替代。4.姓名较长，汉字与英文字符合计超过30个(1个汉字算2个字符)的， 需按姓名中第一个汉字或英文字符开始按顺序连续输入30个字符(空格字符不输入)，其中英文字符输入时不区别大小写。5.姓名中有“.”或“。”时，请仔细辨析身份证件原件上的“。“或”。”，准确输入。6.姓名中有“，”时，请使用空格替换。7.中国护照用户请填写证件上的中文姓名。8.外籍护照用户请填写证件上的英文姓名">姓名填写规则（用于身份核验，请正确填写）</button>
+					</td>
+				</tr>
+				<tr>
+					<td>*证件号码：</td>
+					<td><input type="text" placeholder="请输入您的证件号码"></td>
+					<td>（用于身份核验，请正确填写）</td>
+				</tr>
+				<tr>
+					<td>*邮箱：</td>
+					<td><input type="text" placeholder="请正确填写邮箱地址"></td>
+					<td>请正确填写手机号码，稍后将向该手机号码发送短信验证码</td>
+				</tr>
+				<tr>
+					<td>*手机号码（+86）：</td>
+					<td><input type="text" placeholder="请输入您的手机号码"></td>
+				</tr>
+				<tr>
+					<td>*旅客类型:</td>
+					<td><select>
+						<option selected>成人</option>
+						<option>儿童</option>
+						<option>学生</option>
+						<option>残疾军人、伤残人民警察</option>
+						</select>
+					</td>
+				</tr>
+				<tr align="right">
+					<td colspan="10" align="center">
+						<input type="checkbox">我已阅读并同意遵守<a href="https://kyfw.12306.cn/otn/regist/rule">《中国铁路客户服务中心网站服务条款》</a> <a href="https://kyfw.12306.cn/otn/gonggao/privacyPolicy_web.html">《隐私权政策</a>》
+						
+					</td>
+				</tr>
+				<tr align="center">
+					<td colspan="3">
+						<input type="submit" value="下一步">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
