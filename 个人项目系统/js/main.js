@@ -15,14 +15,10 @@ function checkTime(i){
 			return i;
 		}
 function changemain(){
-	if(window.top!=window.self){
-		window.top.location="main.html";
-	}
+	window.top.location="main.html";
 }
 function changeabout(){
-	if(window.top!=window.self){
-		window.top.location="about.html";
-	}
+	window.top.location="about.html";
 }
 function exit(){
 			var x = confirm("确定退出？");
