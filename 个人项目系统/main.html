@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/main.css">
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body onload="startTime()">
+		<div id="topleft">
+			<div>
+			<script type="text/javascript" src="js/mainyear.js"></script>
+			<script type="text/javascript" src="js/maintraditionaltime.js"></script>
+			<font><script>CalConv();</script></font></a>
+			<span id="week"></span>
+			<script type="text/javascript" src="js/mainweek.js"></script>
+			<span id="time"></span>
+			</div>
+			<div id="topwelcome">
+				<script type="text/javascript" src="js/mainwelcome.js"></script>
+			</div>
+			<div id="topwelcome">
+				<script type="text/javascript" src="js/festival.js"></script>
+				<span id="festival"></span>
+			</div>
+		</div>
+		<div id="topcenter">
+			<h1 id="topwelcome">欢迎登录个人项目系统</h1>
+		</div>
+		<div id="topright">
+			<div>
+			<span><a href="#" onclick="changemain()" id="link1">首页</a></span>
+			<span><a href="#" onclick="changeabout()" id="link2">关于</a></span>
+			<span><a href="#" onclick="exit()" id="link3">退出</a></span>
+			</div>
+			<div>
+				<span>
+					<img id="picture" src="images/user.png">
+					<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo" id="button">admin</button>
+					<div id="demo" class="collapse">
+						用户：admin&nbsp;&nbsp;&nbsp;&nbsp;状态：在线&nbsp;&nbsp;&nbsp;&nbsp;网络状态：良好&nbsp;&nbsp;12.4k/s
+					</div>
+				</span>
+			</div>
+		<div id="maindiv1">
+			<div id="divtitle">项目NO.1<br>首个html网页<br>使用html技术开发的表单</div>
+			<a href="registUser.html" id="divlink1">html表单</a>
+			<div id="divtitle">html表单实例12306注册页</div>
+			<a href="12306.html" id="divlink2">12306</a>
+		</div>	
+		<div id="maindiv2">
+			<div id="divtitle">项目NO.2<br>CSS登录界面<br>本系统登录界面</div>
+			<a href="login样版.html" id="divlink3">本系统登录界面</a>
+		</div>
+		<div id="maindiv3">
+			<div id="divtitle">项目NO.3<br>Bootstrap计算器<br>个人存款计算器</div>
+			<a href="money.html" id="divlink4">个人存款计算器</a>
+			<div id="divtitle">个人社保计算器</div>
+			<a href="calc.html" id="divlink4">个人社保计算器</a>
+		</div>
+		<div id="maindiv4">
+			<div id="divtitle">项目NO.4<br>html+js+Bootstrap计算器<br>简单计算器</div>
+			<a href="calc tool.html" id="divlink4">简单计算器</a>
+		</div>
+		<div id="maindiv5">
+			<div id="divtitle">项目NO.5<br>项目实例<br>UOLab联合开发实验室</div>
+			<a href="https://responsbility.github.io/Flash/%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91/login.html" id="divlink4">UOLab联合开发实验室</a>
+			<div id="divtitle">行程系统</div>
+			<a href="https://responsbility.github.io/Flash/%E8%A1%8C%E7%A8%8B/login.html" id="divlink4">行程系统</a>
+		</div>
+		<div id="mainbottom">
+			<span>制作人：responsbility</span>
+		</div>
+	</body>
+</html>
