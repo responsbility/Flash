@@ -1,0 +1,62 @@
+		body{
+				background-color:#1E9FFF;
+			}
+			#picture{
+				width:400px;
+				height:100px;
+			}
+			#sign{
+				color:black;
+				font-family: "微软雅黑";
+				margin-top:20px;
+			}
+			#logindiv{
+				background-color:white;
+				width:550px;
+				height:530px;
+				margin:0 auto;/*居中*/
+				color:#1E9FFF;
+				margin-top:40px;/*顶端位边距*/
+				padding-top:20px;/*顶端内边距*/
+				text-align: center;
+			}
+			#uname{
+				width:426px;
+				height:55px;
+				border-radius: 5px;
+				border:1px solid lightgrey;
+				margin-left:-30px;/*左部位边距*/
+				background-color:transparent;/*背景透明*/
+				padding-left:30px;/*左侧内边距*/
+			}
+			#upsw{
+				width:426px;
+				height:55px;
+				border-radius: 5px;/*边框四角变圆*/
+				border:1px solid lightgrey;
+				margin-left:-30px;/*左部位边距*/
+				background-color:transparent;/*背景透明*/
+				padding-left:30px;/*左侧内边距*/
+				margin-top:5px;
+			}
+			.picturesign{
+				margin-top:5px;
+			}
+			#border{
+				color:black;
+				margin-top:10px;
+			}
+			#bottomDIV{
+				color:black;
+				font-family:"宋体";
+				margin-top:5px;
+			}
+			#loginBtn{
+				width:456px;
+				height:55px;
+				margin-top:5px;
+				background-color: orangered;
+				color:white;
+				border-radius: 5px;
+				margin-left:-5px;
+			}
