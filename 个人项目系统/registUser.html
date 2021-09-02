@@ -1,0 +1,48 @@
+<!-- DOCTYPE指的是：文档类型定义，定义了网页的根元素是html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--设置编码为UTF-8，防止页面出现乱码-->
+		<meta charset="UTF-8">
+		<title>中北大学毕业设计管理系统用户注册</title>
+	</head>
+	<body>
+		<form action="receive.html"><!--表单-->
+			用户名<input type="text" placeholder="请输入用户名">
+			<br><!--换行-->
+			密码<input type="password" placeholder="请输入密码">
+			<br>
+			性别<input type="radio" name="gender">男
+			   <input type="radio" name="gender">女
+			<br>
+			籍贯<select><!--下拉选择-->
+				<option>山西太原</option>
+				<option>山西大同</option>
+				<option>山西阳泉</option>
+				<option>山西长治</option>
+				<option>山西晋城</option>
+				<option>山西朔州</option>
+				<option>山西忻州</option>
+				<option>山西吕梁</option>
+				<option>山西晋中</option>
+				<option>山西临汾</option>
+				<option>山西运城</option>
+			</select>
+			<br>
+			爱好<input type="checkbox">唱<!--复选框-->
+				<input type="checkbox">跳
+				<input type="checkbox">rap
+				<input type="checkbox">篮球
+				<br>
+				<!--文本域:5行50列-->
+				自我介绍
+				<br>
+				<textarea rows="5" cols="50">responsbility	</textarea>
+				<br>
+				上传简历<input type="file">
+				<br>
+				<input type="submit" value="注册">
+				<input type="reset" value="清空重填">
+		</form>
+	</body>
+</html>
