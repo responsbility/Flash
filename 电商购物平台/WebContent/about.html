@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于</title>
+<link rel="icon" type="image/x-icon" href="images/about.ico" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+</head>
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">登录/首页</a></li>
+    <li><a href="#">关于</a></li>
+    </ul>
+    </div>
+    
+     <div class="rightinfo">
+    	<span style="font-family: 微软雅黑;font-size: 20px;">
+    		本系统由java版电商购物平台改进而来，功能基本保留（采购员模块仍在开发当中），并对功能进行进一步的改进；
+    		当前版本为测试版第一版，如有各种意见，请在意见反馈给予反馈。
+    		<br>
+    		当前版本：1.1.0
+    		<br>
+    		最后修改时间:
+    		<script>
+    			document.write(document.lastModified);
+    		</script>
+    	</span>
+    </div>
+</body>
+</html>

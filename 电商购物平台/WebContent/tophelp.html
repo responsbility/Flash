@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助</title>
+<link rel="icon" type="image/x-icon" href="images/help.ico" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+</head>
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">帮助</a></li>
+    </ul>
+    </div>
+    
+    <div class="rightinfo">
+    	<span style="font-family: 微软雅黑;font-size: 20px;">
+    		（1）页面中展示的商品可能会不全，点击下方页面序号即可恢复。
+    		<br>
+    		（2）登录次数暂时不全面，可作为娱乐性观看，不可作为依据。
+    		<br>
+    		（3）页面样式采取模板，并非原创，在原版基础上有略微改动。
+    		<br>
+    		（4）登录公共账号，请勿随意修改信息（尤其密码），测试修改后请修改为原密码（123456）。
+    		<br>
+    		（5）更多意见可在意见反馈中进行反馈，欢迎反馈。
+    		<br>
+    		公共账号
+    		<br>
+    		用户名：tourist
+    		<br>
+    		密码：123456
+    		</span>
+    </div>
+</body>
+</html>

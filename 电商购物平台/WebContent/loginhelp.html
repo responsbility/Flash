@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>帮助</title>
+<link rel="icon" type="image/x-icon" href="images/help.ico" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+</head>
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">登录</a></li>
+    <li><a href="#">帮助</a></li>
+    </ul>
+    </div>
+    
+    <div class="rightinfo">
+    	<span style="font-family: 微软雅黑;font-size: 20px;">
+    		（1）注册用户可放心使用真实信息，注册信息均收录于个人数据库中，不会泄露个人信息；
+    		<br>
+    		（2）如不想注册，可使用公共账号（tourist），密码（123456）进行登录体验；
+    		<br>
+    		（3）为了您更好的体验，建议您注册用户进行体验。
+    		<br>
+    		（4）为了数据安全以便正常运行，管理员界面暂不提供体验，可在意见反馈中提供用户名、姓名以审核，审核通过可进行短暂体验。
+    		<br>
+    		（5）更多意见可在意见反馈中进行反馈，欢迎反馈。
+    		<br>
+    		公共账号
+    		<br>
+    		用户名：tourist
+    		<br>
+    		密码：123456
+    		</span>
+    </div>
+</body>
+</html>
